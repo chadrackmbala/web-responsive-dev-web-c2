@@ -1,0 +1,452 @@
+/* Un reset pour enlever certaines définitions par
+    défaut de la part des navigateurs */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: 'Inter', sans-serif;
+}
+header {
+    background-color: #d9d9d9;
+    padding: 10px 20px;
+}
+.logo {
+    cursor: pointer;
+}
+
+/* SECTION HEADER */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+/* Ce max-width sert à limiter la largeur maximalde notre 
+    container càd, il ne peut pas depasser cette taille
+    qu'importe la taille de l'écrant et le margin auto 
+    permet de le maintenir toujours centé */
+
+    max-width: 1500px;
+    margin: auto;
+}
+.academy {
+    background-image: url(./Images/bg-academie.jpg);
+    background-size: cover;
+    background-position: center;
+
+/* 100 vh pour que le block occupe toute la hauteur disponible 
+    de la page du moment où aucun block ou élément ne se trouve
+    en dessous de ce block */
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.texte {
+    color: #fff;
+    position: relative;
+    width: 700px;
+}
+.texte h2 {
+    font-size: 4em;
+}
+.texte p {
+    font-size: 2rem;
+    
+}
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,0.5);
+}
+
+/* SECTION FORMATION */
+
+.formation-container {
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 50px 0;
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    text-align: center;
+}
+.card p {
+    margin-top: 15px;
+}
+.card h3 {
+    margin-top: 20px;
+}
+
+/* SECTION NOS PROJETS */
+
+.nos-projets {
+    background-color: #d39393;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+.projet-and-title-container h2 {
+    text-align: center;
+}
+.container-projet {
+    display: flex;
+    align-items: center;
+}
+.image-projet img {
+    width: 200px;
+    height: 200px;
+}
+.box-projet-details {
+    margin-left: 20px;
+    height: 100px;
+}
+.box-projet-details p {
+    margin-bottom: 20px;
+}
+.a {
+    background-color: #fff;
+    color: #000;
+    padding: 15px;
+    transition: all 500ms;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.a:hover {
+    font-size: 20px;
+    transition: 500ms;
+    background: darkred;
+    color: #fff;
+}
+.container-projet-end {
+    display: flex;
+    justify-content: end;
+}
+.details-revers {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.details-revers p {
+    margin-bottom: 20px;
+}
+.block-container-nos-projets {
+    width: 700px;
+}
+.moments-forts {
+    background-color: #d9d9d9;
+    padding: 50px 0;
+    text-align: center;
+}
+.moments-forts h2 {
+    margin-bottom: 20px;
+}
+.images-moments-forts-container img {
+    width: 400px;
+    height: 400px;
+}
+.images-moments-forts-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.coachs {
+    background-color: #d39393;
+    padding: 50px 0;
+}
+.coachs h2 {
+    text-align: center;
+    margin: 50px;
+}
+.coachs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.coachs-container .coach {
+    margin: 0 150px;
+    text-align: center;
+}
+.coach p {
+    margin-top: 20px;
+}
+.notre-equipe {
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+.notre-equipe h2 {
+    text-align: center;
+}
+.notre-equipe img {
+    padding-top: 30px;
+    width: 90vw;
+}
+.footer {
+    background-color: #d39393;
+    padding: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+}
+@media screen and (max-width: 830px) {
+    .images-moments-forts-container img {
+        width: 350px;
+        height: 350px;
+    }
+    .coachs-container .coach {
+        margin: 0 100px;
+    }
+}
+@media screen and (max-width: 665px) {
+    .coachs-container .coach {
+        margin: 0 80px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .coachs-container .coach {
+        margin: 0 50px;
+    }
+    .footer {
+        font-size: 100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .coachs {
+        padding: 50px 0 0px 0;
+    }
+    .coachs-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .coachs-container .randy {
+        margin: 100px 0;
+    }
+}
+@media screen and (max-width: 480px) {
+    .images-moments-forts-container img {
+        width: 300px;
+        height: 300px;
+    }
+}
+@media screen and (max-width:540px) {
+    
+    .block-container-nos-projets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-projet {
+        flex-direction: column;
+        align-items: center;
+    }
+    .box-projet-details {
+        margin: 20px 0 0 0;
+    }
+    .container-projet-end {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .details-revers {
+        margin: 20px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .block-container-nos-projets {
+        gap: 50px;
+    }
+    .projet-and-title-container h2 {
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width:700px) {
+    .block-container-nos-projets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-projet {
+        flex-direction: column;
+        align-items: center;
+    }
+    .box-projet-details {
+        margin: 20px 0 0 0;
+    }
+    .container-projet-end {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .details-revers {
+        margin: 20px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .block-container-nos-projets {
+        width: auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    .container h1 {
+        margin-top: 20px;
+    }
+    .texte {
+        margin: 0 20px;
+    }
+    .box-projet-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    /* .container-projet-end {
+        flex-direction: column-reverse;
+    } */
+}
+/* .academy{
+    height: 100vh;
+    background: url(Images/bg-academie.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layer{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.academy h2{
+    font-size: 4em;
+    font-weight: 700;  
+}
+
+.texte{
+    position: relative;
+    color: white;
+    z-index: 99; 
+    text-align: center;
+    max-width: 700px;
+}
+
+.academy p{
+    font-size: 2rem;
+} */
+
+/* SECTION FORMATION */
+
+/* .card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    width: 250px;
+    gap: 15px;
+}
+
+.formation{
+    text-align: center;
+    margin: 50px 0;
+} */
+
+/* SECTION NOS PROJETS */
+
+/* .nos-projets{
+    background-color: #D39393;
+    padding: 5rem 1rem;
+    text-align: center;
+}
+
+.nos-projets h2{
+    font-weight: bold;
+    font-size: 36px;
+} */
+
+/* 
+@media screen and (max-width:768px){
+    nav{
+        flex-direction: column;
+        gap: 20px;
+        padding: 32px 0;
+    }
+
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo{
+        padding: 0;
+    }
+
+    .academy h2{
+        font-size: 3em;
+    }
+
+    .academy p{
+        font-size: 1.2rem;
+    }
+
+    .texte{
+        padding: 0 10px;
+    }
+
+
+} */
+
+/* 
+Desktop 1500px
+Tablette 768px
+Mobile L 425px
+*/
